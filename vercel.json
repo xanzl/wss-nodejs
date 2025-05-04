@@ -15,7 +15,7 @@
   "routes": [
     {
       "src": "/screenshot(?:/.*)?",
-      "dest": "/api/screenshot",
+      "dest": "/api/screenshot.js",
       "methods": ["GET", "POST"]
     }
   ]
