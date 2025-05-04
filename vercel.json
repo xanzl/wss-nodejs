@@ -1,0 +1,17 @@
+// vercel.json
+{
+  "version": 2,
+  "builds": [
+    {
+      "src": "api/screenshot.js",
+      "use": "@vercel/node"
+    }
+  ],
+  "routes": [
+    {
+      "src": "/screenshot",
+      "dest": "/api/screenshot",
+      "methods": ["GET", "POST"]
+    }
+  ]
+}
