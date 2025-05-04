@@ -6,8 +6,7 @@
       "use": "@vercel/node",
       "config": {
         "includeFiles": [
-          "node_modules/playwright/**",
-          "node_modules/@playwright/**"
+          "node_modules/playwright/**"
         ]
       }
     }
@@ -17,6 +16,20 @@
       "src": "/screenshot(.*)",
       "dest": "/api/screenshot",
       "methods": ["GET", "POST"]
+    },
+    {
+      "src": "/health",
+      "dest": "/api/screenshot/health"
     }
-  ]
+  ],
+  "functions": {
+    "api/screenshot.js": {
+      "handler": "api/screenshot.app",
+      "memory": "1024MB",
+      "timeout": 30
+    }
+  },
+  "env": {
+    "PLAYWRIGHT_BROWSERS_PATH": "0"
+  }
 }

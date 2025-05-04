@@ -20,6 +20,11 @@ const limiter = rateLimit({
   }
 });
 
+// 健康检查端点
+app.get('/health', (req, res) => {
+  res.status(200).send('Screenshot Service Ready');
+});
+
 // 参数验证规则
 const schema = Joi.object({
   url: Joi.string().uri().required().messages({
