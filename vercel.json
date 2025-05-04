@@ -18,16 +18,10 @@
       "methods": ["GET", "POST"]
     },
     {
- "     src": "/health",
+      "src": "/health",
       "dest": "/api/screenshot/health"
     }
   ],
-  "functions": {
-    "api/screenshot.js": {
-      "memory": "1024MB",
-      "timeout": 30
-    }
-  },
   "env": {
     "PLAYWRIGHT_BROWSERS_PATH": "0"
   }
