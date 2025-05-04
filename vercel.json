@@ -3,12 +3,18 @@
   "builds": [
     {
       "src": "api/screenshot.js",
-      "use": "@vercel/node"
+      "use": "@vercel/node",
+      "config": {
+        "includeFiles": [
+          "node_modules/playwright/**",
+          "node_modules/@playwright/**"
+        ]
+      }
     }
   ],
   "routes": [
     {
-      "src": "/screenshot",
+      "src": "/screenshot(.*)",
       "dest": "/api/screenshot",
       "methods": ["GET", "POST"]
     }
