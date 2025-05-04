@@ -18,13 +18,12 @@
       "methods": ["GET", "POST"]
     },
     {
-      "src": "/health",
+ "     src": "/health",
       "dest": "/api/screenshot/health"
     }
   ],
   "functions": {
     "api/screenshot.js": {
-      "handler": "api/screenshot.app",
       "memory": "1024MB",
       "timeout": 30
     }
