@@ -1,9 +1,9 @@
 {
-  "name": "vercel-screenshot-pnpm",
+  "name": "vercel-screenshot",
   "version": "1.0.0",
   "packageManager": "pnpm@8.6.5",
   "scripts": {
-    "postinstall": "playwright install chromium"
+    "postinstall": "if [ \"$VERCEL\" = \"1\" ]; then playwright install chromium; fi"
   },
   "dependencies": {
     "@vercel/node": "^3.0.0",
