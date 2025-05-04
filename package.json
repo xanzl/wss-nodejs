@@ -1,8 +1,7 @@
 {
-  "name": "vercel-screenshot-service",
+  "name": "vercel-screenshot-pnpm",
   "version": "1.0.0",
-  "description": "Web Screenshot Service for Vercel Deployment",
-  "main": "api/screenshot.js",
+  "packageManager": "pnpm@8.6.5",
   "scripts": {
     "postinstall": "playwright install chromium"
   },
@@ -14,6 +13,6 @@
     "express-rate-limit": "^6.7.0"
   },
   "engines": {
-    "node": ">=16.x"
+    "node": ">=18.x"
   }
 }
